@@ -6,8 +6,10 @@
     app.config(['$routeProvider', '$locationProvider', '$templates', function($routeProvider, $locationProvider, $templates){
         $locationProvider.html5Mode({enabled: true, requireBase: false});
         $routeProvider
-            .when('/', {template: $templates.home, controller: 'HomeController', controllerAs: 'home'})
-            .otherwise({template: $templates.home, controller: 'HomeController', controllerAs: 'home'});
+            // .when('/', {template: $templates.home, controller: 'HomeController', controllerAs: 'home'})
+            // .otherwise({template: $templates.home, controller: 'HomeController', controllerAs: 'home'});
+            .when('/', {templateUrl: 'templates/home.html', controller: 'HomeController', controllerAs: 'home'})
+            .otherwise({templateUrl: 'templates/home.html', controller: 'HomeController', controllerAs: 'home'});
     }]);
 
 })();
