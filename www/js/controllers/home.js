@@ -3,12 +3,25 @@
 (function(){
     var app = angular.module('DailyQuest');
 
-    app.controller('HomeController', ['$location', function($location){
+    app.controller('HomeController', ['$deviceReady', '$location', function($deviceReady, $location){
         this.title = 'Apache Cordova';
 
         this.sayHi = function(){
+            alert($location.path());
             $location.path('blah');
         };
+
+        this.onDeviceReady = function() {
+            var parentElement = document.getElementById('deviceready');
+            var listeningElement = parentElement.querySelector('.listening');
+            var receivedElement = parentElement.querySelector('.received');
+
+            listeningElement.setAttribute('style', 'display:none;');
+            receivedElement.setAttribute('style', 'display:block;');
+        };
+
+        $deviceReady(this.onDeviceReady.bind(this));
+
     }]);
 
 })();

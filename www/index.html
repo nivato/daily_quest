@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html ng-app="DailyQuest">
     <head>
+        <base href="/android_asset/www/" />
         <!--
         Customize this policy to fit your own app's needs. For more guidance, see:
             https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
@@ -26,7 +27,8 @@
         <script type="text/javascript" src="cordova.js"></script>
 
         <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript" src="js/templates.js"></script>
+
+        <script type="text/javascript" src="js/services/device_ready.js"></script>
 
         <script type="text/javascript" src="js/controllers/application.js"></script>
         <script type="text/javascript" src="js/controllers/home.js"></script>
