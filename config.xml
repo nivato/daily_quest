@@ -26,4 +26,6 @@
     <engine name="android" spec="~5.1.1" />
     <preference name="Fullscreen" value="true" />
     <preference name="Orientation" value="landscape" />
+    <preference name="loadUrlTimeoutValue" value="700000" />
+    <preference name="LoadingDialog" value="Loading, Please wait..." />
 </widget>
