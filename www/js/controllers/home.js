@@ -7,7 +7,6 @@
         this.title = 'Apache Cordova';
 
         this.sayHi = function(){
-            alert($location.path());
             $location.path('blah');
         };
 
