@@ -30,7 +30,7 @@
 | **Dana**        | Goddess of Water           |
 | **Kaleeta**     | Goddess of Fate            |
 | **Divanna**     | Goddess of Virginity       |
-| **Mokousha**    | Goddess of Mercy           |
+| **Mokosha**     | Goddess of Mercy           |
 | **Rosalia**     | Mermaid                    |
 | **Arnica**      | Healer                     |
 | **Yaga**        | Witch                      |
