@@ -1,47 +1,48 @@
-# Characters
+# Male Characters
 
 | Name            | Description                |
 | --------------- | -------------------------- |
-| **Rod**         | God of the Gods            |
-| **Lada**        | Goddess of love            |
-| **Bilobo**      | God of Sun                 |
+| **Rod**         | God of the Gods (Sun)      |
 | **Svarog**      | God of Fire                |
 | **Perun**       | God of Thunder             |
-| **Stribo**      | God of Winds               |
+| **Striboh**     | God of Winds               |
 | **Siver**       | God of Cold                |
 | **Arey**        | God of War                 |
-| **Slava**       | Goddess of Victory         |
 | **Simargl**     | Dog-bird                   |
-| **Lelia**       | Goddess of Spring          |
-| **Didukh**      | God of Harvest             |
-| **Oriana**      | Goddess of Earth (Country) |
-| **Dana**        | Goddess of Water           |
 | **Veles**       | God of Wisdom and Art      |
 | **Horos**       | God of Moon                |
 | **Miha**        | God of Animals             |
-| **Kaleta**      | Goddess of Fate            |
 | **Shum**        | God of Woods               |
 | **Urai**        | God of Clouds              |
-| **Divanna**     | Goddess of Virginity       |
-| **Mokosha**     | Goddess of Mercy           |
-| **Mavka**       | Fairy                      |
-| **Pek**         | Evil God of Fights         |
-| **Chur**        | Fights against Pek         |
-| **Rosalia**     | Mermaid                    |
+| **Peck**        | Evil God of Fights         |
 | **Viy**         | Blind Demon Underground    |
 | **Alatir**      | God of Stone               |
+| **Radohost**    | God of Trade               |
+
+
+# Female Characters
+
+| Name            | Description                |
+| --------------- | -------------------------- |
+| **Lada**        | Goddess of love            |
+| **Lelia**       | Goddess of Spring          |
+| **Oriana**      | Goddess of Earth (Country) |
+| **Dana**        | Goddess of Water           |
+| **Kaleeta**     | Goddess of Fate            |
+| **Divanna**     | Goddess of Virginity       |
+| **Mokousha**    | Goddess of Mercy           |
+| **Rosalia**     | Mermaid                    |
 | **Arnica**      | Healer                     |
 | **Yaga**        | Witch                      |
-| **Bagan**       | God of Bulls               |
 | **Matrigan**    | Poison Goddess             |
-| **Vovkull**     | Werewolf                   |
-| **Vurdalak**    | Vampire                    |
 | **Dodolla**     | Priestess of Fire          |
-| **Zella**       | Healer                     |
+| **Zella**       | Fairy                      |
 | **Karna**       | Goddess of Dead            |
-| **Koschiy**     | Skeleton                   |
 | **Mara**        | Goddess of Evil            |
 | **Navia**       | Goddess of Insanity        |
-| **Oratania**    | Country, Ukraine, Oriana   |
-| **Radohost**    | God of Trade               |
+
+
+# Stuff
+| Name            | Description                |
+| --------------- | -------------------------- |
 | **Totem**       | Magical stuff              |
