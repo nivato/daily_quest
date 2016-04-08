@@ -59,7 +59,7 @@ body {
 .panel.bottom {
     left: 50%;
     -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
+            transform: translateX(-50%);
     white-space: nowrap;
 }
 
@@ -147,16 +147,35 @@ body {
     margin: -5px 8px -5px -5px;
 }
 
-.counter.coins {
-    left: 300px;
+.icon {
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background: url('../img/heroes.png');
+    -webkit-background-size: contain;
+            background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid red;
 }
 
-.counter.gems {
-    left: 600px;
+.icon > .label {
+    display: block;
+    position: absolute;
+    width: 150%;
+    left: 0;
+    top: 100%;
+    -webkit-transform: translateX(-20%) translateY(-50%);
+            transform: translateX(-20%) translateY(-50%);
+
+    font-size: 14px;
+    font-weight: bolder;
+    line-height: 1;
+    border: 1px solid red;
+    white-space: normal;
+    text-align: center;
 }
-
-
-
 
 
 
