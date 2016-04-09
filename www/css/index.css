@@ -180,7 +180,7 @@ body {
     font-size: 16px;
     line-height: 14px;
     color: #0aa;
-    text-shadow: 1px 1px 2px #cff;
+    text-shadow: -1px -1px 1px #cff, 1px -1px 1px #cff, 1px 1px 1px #cff, -1px 1px 1px #cff;
     font-weight: bolder;
     white-space: normal;
     text-align: center;
