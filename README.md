@@ -9,3 +9,8 @@ Setup
   * `cordova build`
   * `cordova run android --device` or `cordova run android --emulator`
   * `chrome://inspect` to debug
+
+Icon Click Settings
+-------------------
+  * Saturation: -40
+  * Brightness: -30
