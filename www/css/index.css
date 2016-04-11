@@ -214,11 +214,20 @@ body {
     background: url('../img/pantheon2.png');
 }
 
+.icon.adventure {
+    background: url('../img/adventure.png');
+}
+
+.icon.adventure:active {
+    background: url('../img/adventure2.png');
+}
+
 .icon.heroes, .icon.heroes:active,
 .icon.missions, .icon.missions:active,
 .icon.items, .icon.items:active,
 .icon.book, .icon.book:active,
-.icon.pantheon, .icon.pantheon:active {
+.icon.pantheon, .icon.pantheon:active,
+.icon.adventure, .icon.adventure:active {
     -webkit-background-size: contain;
             background-size: contain;
     background-repeat: no-repeat;
