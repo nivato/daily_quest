@@ -8,6 +8,7 @@
         $routeProvider
             .when('/', {templateUrl: 'templates/home.html', controller: 'HomeController', controllerAs: 'home'})
             .when('/blah', {templateUrl: 'templates/home2.html', controller: 'HomeController2', controllerAs: 'home2'})
+            .when('/heroes', {templateUrl: 'templates/heroes.html', controller: 'HeroesController', controllerAs: 'heroes'})
             .otherwise({templateUrl: 'templates/home.html', controller: 'HomeController', controllerAs: 'home'});
     }]);
 

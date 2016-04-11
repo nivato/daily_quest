@@ -1,14 +1,3 @@
-<div class="panel top">
-    <div class="counter">
-        <img src="img/coin.png" />
-        1000
-    </div>
-    <div class="counter">
-        <img src="img/gem.png" />
-        1
-    </div>
-</div>
-
 <div class="app">
     <h1 ng-click="home.sayHi()">{{home.title}}</h1>
     <div id="deviceready" class="blink">
@@ -17,8 +6,8 @@
     </div>
 </div>
 
-<div class="panel bottom">
-    <div class="icon heroes">
+<div class="panel bottom center">
+    <div class="icon heroes" ng-click="home.goToHeroes()">
         <div class="label">Manage Hero</div>
     </div>
     <div class="icon items">
