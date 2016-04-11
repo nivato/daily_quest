@@ -206,10 +206,19 @@ body {
     background: url('../img/book2.png');
 }
 
+.icon.pantheon {
+    background: url('../img/pantheon.png');
+}
+
+.icon.pantheon:active {
+    background: url('../img/pantheon2.png');
+}
+
 .icon.heroes, .icon.heroes:active,
 .icon.missions, .icon.missions:active,
 .icon.items, .icon.items:active,
-.icon.book, .icon.book:active {
+.icon.book, .icon.book:active,
+.icon.pantheon, .icon.pantheon:active {
     -webkit-background-size: contain;
             background-size: contain;
     background-repeat: no-repeat;
