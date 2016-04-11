@@ -7,6 +7,7 @@
         this.title = 'Apache Cordova';
 
         this.goToHeroes = function(){
+            $location.replace();
             $location.path('heroes');
         };
 

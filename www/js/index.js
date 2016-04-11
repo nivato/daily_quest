@@ -1,7 +1,7 @@
 "use strict";
 
 (function(){
-    var app = angular.module('DailyQuest', ['ngRoute', 'ngCordova']);
+    var app = angular.module('DailyQuest', ['ngRoute', 'ngTouch', 'ngCordova']);
 
     app.config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider){
         $locationProvider.html5Mode({enabled: true, requireBase: false});
