@@ -20,6 +20,11 @@
         <title>Daily Quest</title>
     </head>
     <body ng-controller="ApplicationController as app">
+        <div class="panel top left" ng-hide="app.currentView.id == 'home'">
+            <div class="icon back" ng-click="app.backHome()"></div>
+            <h1 class="view-title">{{app.currentView.label}}</h1>
+        </div>
+
         <div class="panel top center">
             <div class="counter">
                 <img src="img/coin.png" />
@@ -32,6 +37,12 @@
         </div>
 
         <ng-view></ng-view>
+
+        <div class="panel bottom center" ng-show="app.currentView.id == 'home'">
+            <div ng-repeat="item in app.mainMenu" class="icon {{item.id}}" ng-click="app.goTo(item)">
+                <div class="label">{{item.label}}</div>
+            </div>
+        </div>
 
         <script type="text/javascript" src="js/lib/jquery-2.2.3.min.js"></script>
         <script type="text/javascript" src="js/lib/fastclick.js"></script>
@@ -49,6 +60,11 @@
         <script type="text/javascript" src="js/controllers/home.js"></script>
         <script type="text/javascript" src="js/controllers/home2.js"></script>
         <script type="text/javascript" src="js/controllers/heroes.js"></script>
+        <script type="text/javascript" src="js/controllers/items.js"></script>
+        <script type="text/javascript" src="js/controllers/missions.js"></script>
+        <script type="text/javascript" src="js/controllers/book.js"></script>
+        <script type="text/javascript" src="js/controllers/pantheon.js"></script>
+        <script type="text/javascript" src="js/controllers/adventure.js"></script>
 
     </body>
 </html>

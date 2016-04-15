@@ -6,11 +6,6 @@
     app.controller('HomeController', ['$deviceReady', '$location', function($deviceReady, $location){
         this.title = 'Apache Cordova';
 
-        this.goToHeroes = function(){
-            $location.replace();
-            $location.path('heroes');
-        };
-
         this.sayHi = function(){
             $location.path('blah');
         };
