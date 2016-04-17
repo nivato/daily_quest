@@ -20,9 +20,9 @@
         <title>Daily Quest</title>
     </head>
     <body ng-controller="ApplicationController as app">
-        <div class="panel top left" ng-hide="app.currentView.id == 'home'">
-            <div class="icon back" ng-click="app.backHome()"></div>
-            <h1 class="view-title">{{app.currentView.label}}</h1>
+        <div class="panel top left" ng-hide="app.currentView.id == 'home'" ng-click="app.backHome()">
+            <div ng-class="'icon back'"></div>
+            <h1 class="view-title" ng-bind="app.currentView.label"></h1>
         </div>
 
         <div class="panel top center">
@@ -40,7 +40,7 @@
 
         <div class="panel bottom center" ng-show="app.currentView.id == 'home'">
             <div ng-repeat="item in app.mainMenu" class="icon {{item.id}}" ng-click="app.goTo(item)">
-                <div class="label">{{item.label}}</div>
+                <div class="label" ng-bind="item.label"></div>
             </div>
         </div>
 
