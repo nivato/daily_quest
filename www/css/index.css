@@ -29,7 +29,6 @@ body {
     padding: 5px 15px;
     -webkit-border-radius: 4px;
             border-radius: 4px;
-    color: #fff;
     white-space: nowrap;
 }
 
@@ -261,6 +260,68 @@ body {
     color: #fff;
     text-shadow: -1px -1px 0px #666, 1px -1px 0px #666, -1px 1px 0px #666, 1px 1px 0px #666;
 }
+
+.tabs {
+    position: relative;
+    border-bottom: 1px solid #666;
+    z-index: 1;
+}
+
+.tabs:before {
+    display: table;
+    content: " ";
+}
+
+.tabs:after {
+    clear: both;
+    display: table;
+    content: " ";
+}
+
+.tabs > div {
+    position: relative;
+    display: block;
+    float: left;
+    z-index: -1;
+    margin-bottom: -1px;
+    margin-right: 2px;
+    -webkit-border-radius: 4px 4px 0 0;
+            border-radius: 4px 4px 0 0;
+    background-color: #fff;
+    padding: 10px 15px;
+    font-size: 15px;
+    line-height: 15px;
+    cursor: pointer;
+    color: #666;
+}
+
+.tabs > div.active {
+    z-index: 1;
+    color: #333;
+    border: 1px solid #666;
+    border-bottom-color: #fff;
+}
+
+.tabs-content {
+    position: relative;
+    z-index: -1;
+    margin-top: -1px;
+}
+
+.tabs-content > div {
+    display: none;
+}
+
+.tabs-content > div.active {
+    display: block;
+    background-color: #fff;
+    padding: 10px 15px;
+    -webkit-border-radius: 0 0 4px 4px;
+            border-radius: 0 0 4px 4px;
+    border: 1px solid #666;
+    border-top-color: #fff;
+}
+
 
 
 
