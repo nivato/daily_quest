@@ -66,6 +66,15 @@ body {
     right: 0;
 }
 
+.panel.content {
+    left: 0;
+    top: 0;
+    margin-top: 40px;
+    width: 100%;
+    height: -webkit-calc(100% - 40px);
+    height:         calc(100% - 40px);
+}
+
 .btn {
     display: inline-block;
     padding: 6px 12px;
@@ -265,6 +274,7 @@ body {
     position: relative;
     border-bottom: 1px solid #666;
     z-index: 1;
+    width: 100%;
 }
 
 .tabs:before {
@@ -306,6 +316,8 @@ body {
     position: relative;
     z-index: -1;
     margin-top: -1px;
+    height: -webkit-calc(100% - 37px);
+    height:         calc(100% - 37px);
 }
 
 .tabs-content > div {
@@ -320,6 +332,7 @@ body {
             border-radius: 0 0 4px 4px;
     border: 1px solid #666;
     border-top-color: #fff;
+    height: 100%;
 }
 
 

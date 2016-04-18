@@ -1,22 +1,11 @@
-<div class="panel middle center">
-    <h1>MISSIONS TEMPLATE</h1>
+<div class="panel content">
     <div class="tabs">
-        <div>Daily</div>
-        <div class="active">Weekly</div>
-        <div>Monthly</div>
+        <div ng-repeat="tab in missions.tabs" ng-class="{active: tab == missions.activeTab}" ng-click="missions.activeTab = tab">{{tab.label}}</div>
     </div>
     <div class="tabs-content">
-        <div>
-            <h1>Daily Content</h1>
-            Some Daily Content
-        </div>
-        <div class="active">
-            <h1>Weekly Content</h1>
-            Some Weekly Content
-        </div>
-        <div>
-            <h1>Monthly Content</h1>
-            Some Monthly Content
+        <div ng-repeat="tab in missions.tabs" ng-class="{active: tab == missions.activeTab}">
+            <h1>{{tab.content}}</h1>
+            {{tab.content}}
         </div>
     </div>
 </div>
