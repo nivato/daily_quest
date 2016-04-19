@@ -18,10 +18,10 @@
 
         this.enableScroll = function(){
             var scrolling = false;
-            $('.scroll-container').mousewheel(function(eve){
+            $('.scroll-container').mousewheel(function(event){
                 if (!scrolling){
-                    $(eve.currentTarget).animate(
-                        {top: '+=' + (37 * eve.deltaY) + 'px'},
+                    $(event.currentTarget).animate(
+                        {top: '+=' + (37 * event.deltaY) + 'px'},
                         {
                             duration: 100,
                             start: function(){scrolling = true;},
@@ -29,9 +29,23 @@
                     });
                 }
             });
+            $('.scroll-container').swipe({
+                swipe: function(event, direction, distance, duration, fingerCount) {
+                    if (!scrolling && (direction == 'up' || direction == 'down')){
+                        var modifier = (direction == 'up')? -1: 1;
+                        $(event.currentTarget).animate(
+                            {top: '+=' + (37 * modifier) + 'px'},
+                            {
+                                duration: 100,
+                                start: function(){scrolling = true;},
+                                complete: function(){scrolling = false;}
+                        });
+                    }
+                }
+            });
         };
 
-        $scope.$on('listRendered', function(eve){
+        $scope.$on('listRendered', function(event){
             ctrl.enableScroll();
         });
 
