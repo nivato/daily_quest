@@ -3,7 +3,7 @@
 (function(){
     var app = angular.module('DailyQuest');
 
-    app.controller('MissionsController', ['$scope', '$location', function($scope, $location){
+    app.controller('MissionsController', ['$scope', '$timeout', '$location', function($scope, $location, $timeout){
         var ctrl = this;
         this.tabs = [
             {id: 'daily', label: 'Daily', content: 'Some Daily content'},
@@ -18,17 +18,44 @@
 
         this.enableScroll = function(){
             var scrolling = false;
+            var itemHeight = 38;
+            var missedScrolls = 1;
+            var timestamp = new Date().getTime();
             $('.scroll-container').mousewheel(function(event){
                 if (!scrolling){
-                    $(event.currentTarget).animate(
-                        {top: '+=' + (37 * event.deltaY) + 'px'},
+                    if (new Date().getTime() - timestamp > 500){
+                        missedScrolls = 1;
+                    }
+                    var container = $(event.currentTarget);
+                    var list = container.parent();
+                    var moveDistance = itemHeight * missedScrolls * event.deltaY;
+
+                    var listOffset = list.offset();
+                    var listHeight = list.outerHeight();
+
+                    var containerOffset = container.offset();
+                    var containerHeight = container.outerHeight();
+
+                    if (containerOffset.top + moveDistance > listOffset.top + 1){
+                        moveDistance = listOffset.top - containerOffset.top + 1;
+                    } else if (containerOffset.top + containerHeight + moveDistance < listOffset.top + listHeight - 1){
+                        moveDistance = (listOffset.top + listHeight - 1) - (containerOffset.top + containerHeight);
+                    }
+
+                    container.animate(
+                        {top: '+=' + moveDistance + 'px'},
                         {
-                            duration: 100,
+                            duration: 200,
                             start: function(){scrolling = true;},
                             complete: function(){scrolling = false;}
                     });
+                    missedScrolls = 1;
+                    timestamp = new Date().getTime();
+                } else {
+                    missedScrolls += 1;
                 }
             });
+
             $('.scroll-container').swipe({
                 swipe: function(event, direction, distance, duration, fingerCount) {
                     if (!scrolling && (direction == 'up' || direction == 'down')){
