@@ -57,18 +57,23 @@
             });
 
             $('.scroll-container').swipe({
-                swipe: function(event, direction, distance, duration, fingerCount) {
-                    if (!scrolling && (direction == 'up' || direction == 'down')){
-                        var modifier = (direction == 'up')? -1: 1;
-                        $(event.currentTarget).animate(
-                            {top: '+=' + (37 * modifier) + 'px'},
-                            {
-                                duration: 100,
-                                start: function(){scrolling = true;},
-                                complete: function(){scrolling = false;}
-                        });
+                swipeStatus: function(event, phase, direction, distance, duration, fingerCount){
+                    if (phase == 'move'){
+                        console.log(direction);
+                        if (!scrolling && (direction == 'up' || direction == 'down')){
+                            var modifier = (direction == 'up')? -1: 1;
+                            $(event.currentTarget).animate(
+                                {top: '+=' + (itemHeight * modifier) + 'px'},
+                                {
+                                    duration: 100,
+                                    start: function(){scrolling = true;},
+                                    complete: function(){scrolling = false;}
+                            });
+                        }
                     }
-                }
+                },
+                threshold: itemHeight,
+                triggerOnTouchLeave: true
             });
         };
 
