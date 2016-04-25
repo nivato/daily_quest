@@ -3,7 +3,7 @@
         <div ng-repeat="tab in missions.tabs" ng-class="{active: tab == missions.activeTab}" ng-click="missions.activeTab = tab" ng-bind="tab.label"></div>
     </div>
     <div class="tabs-content">
-        <div ng-repeat="tab in missions.tabs" ng-class="{active: tab == missions.activeTab}" on-repeat-end="listRendered">
+        <div ng-repeat="tab in missions.tabs" ng-class="{active: tab == missions.activeTab}">
             <scroll-list>
                 <div class="scroll-item" ng-repeat="item in tab.items" ng-bind="item"></div>
             </scroll-list>
