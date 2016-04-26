@@ -1,3 +1,29 @@
+<div class="modal fade" ng-class="{in: missions.modal}" ng-click="missions.modal = !missions.modal">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <div class="close">×</div>
+            <h4 class="modal-title">New Mission</h4>
+        </div>
+        <div class="modal-body">
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+            <div>×</div>
+       </div>
+    </div>
+</div>
 <div class="panel content">
     <div class="tabs">
         <div ng-repeat="tab in missions.tabs" ng-class="{active: tab == missions.activeTab}" ng-click="missions.activeTab = tab" ng-bind="tab.label"></div>
@@ -8,7 +34,7 @@
                 <div class="scroll-item" ng-repeat="item in tab.items" ng-bind="item"></div>
             </scroll-list>
             <div class="buttons-panel">
-                <div class="btn">New Mission</div>
+                <div class="btn" ng-click="missions.modal = !missions.modal">New Mission</div>
                 <div class="btn">Edit Mission</div>
             </div>
         </div>

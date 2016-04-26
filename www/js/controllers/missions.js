@@ -18,6 +18,7 @@
                 tab.items.push('Some ' + tab.label + ' Mission ' + j);
             }
         }
+        this.modal = false;
 
     }]);
 

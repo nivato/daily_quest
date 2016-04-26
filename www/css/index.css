@@ -371,6 +371,90 @@ body {
     padding-top: 10px;
 }
 
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: block;
+    visibility: hidden;
+    overflow: hidden;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+            transition: opacity .15s linear;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.fade.in {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal.fade .modal-dialog {
+    -webkit-transition: -webkit-transform .3s ease-out;
+            transition: transform .3s ease-out;
+    -webkit-transform: translate3d(0,-25%,0);
+            transform: translate3d(0,-25%,0);
+}
+
+.modal.in .modal-dialog {
+    -webkit-transform: translate3d(0,0,0);
+            transform: translate3d(0,0,0);
+}
+
+.modal-dialog {
+    position: relative;
+    width: 600px;
+    margin: 30px auto;
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+            box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    background-color: #fff;
+    border: 1px solid #999;
+    border: 1px solid rgba(0,0,0,.2);
+    -webkit-border-radius: 6px;
+            border-radius: 6px;
+}
+
+.modal-header {
+    padding: 10px 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.modal-header .close {
+    display: inline-block;
+    margin: -5px;
+    padding: 0;
+    cursor: pointer;
+    float: right;
+    font-size: 21px;
+    font-weight: 700;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+}
+
+.modal-title {
+    margin: 0;
+    line-height: 15px;
+    font-size: 15px;
+    font-family: inherit;
+    color: inherit;
+    font-weight: normal;
+}
+
+.modal-body {
+    padding: 10px 15px;
+}
+
+
+
+
 
 
 /* Portrait layout (default) */
