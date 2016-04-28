@@ -7,8 +7,13 @@
         return {
             restrict: 'E',
             templateUrl: 'templates/modal_dialog.html',
+            scope: {
+                title: '=',
+                opened: '=',
+                action: '&'
+            },
             link: function(scope, element, attr){
-                console.log(element);
+                console.log(scope.opened);
             },
             transclude: true
         };

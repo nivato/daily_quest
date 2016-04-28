@@ -1,8 +1,8 @@
-<div class="modal fade in">
+<div class="modal fade" ng-class="{in: opened}">
     <div class="modal-dialog">
         <div class="modal-header">
-            <div class="close">×</div>
-            <h4 class="modal-title">New Mission</h4>
+            <div class="close" ng-click="opened = false">×</div>
+            <h4 class="modal-title" ng-bind="title"></h4>
         </div>
         <div class="modal-body">
             <scroll-list>
@@ -10,7 +10,7 @@
             </scroll-list>
        </div>
        <div class="modal-footer">
-            <div class="btn">Ok</div>
+            <div class="btn" ng-click="action()">Ok</div>
         </div>
     </div>
 </div>

@@ -19,6 +19,9 @@
             }
         }
         this.modal = false;
+        this.addMission = function(){
+            console.log('Yey! Added the Mission...');
+        };
 
     }]);
 
