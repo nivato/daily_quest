@@ -10,11 +10,26 @@
             scope: {
                 title: '=',
                 opened: '=',
-                action: '&'
+                submitAction: '&',
+                closeAction: '&'
             },
             link: function(scope, element, attr){
-                console.log(scope.opened);
+                // Do nothing yet
             },
+            controller: ['$scope', '$element', '$attrs', '$transclude', '$timeout', function($scope, $element, $attrs, $transclude, $timeout){
+                this.executeAction = function(){
+                    $scope.submitAction();
+                    this.close();
+                };
+                this.close = function(){
+                    $element.find('.modal.fade').removeClass('in');
+                    $scope.closeAction();
+                    $timeout(function(){
+                        $scope.opened = false;
+                    }, 400);
+                };
+            }],
+            controllerAs: 'modal',
             transclude: true
         };
     }]);

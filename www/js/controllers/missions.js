@@ -22,6 +22,9 @@
         this.addMission = function(){
             console.log('Yey! Added the Mission...');
         };
+        this.closeMission = function(){
+            console.log('Yey! Closed the New Mission...');
+        };
 
     }]);
 
