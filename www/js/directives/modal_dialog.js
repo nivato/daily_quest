@@ -8,7 +8,7 @@
             restrict: 'E',
             templateUrl: 'templates/modal_dialog.html',
             scope: {
-                title: '=',
+                modalTitle: '=',
                 opened: '=',
                 submitAction: '&',
                 closeAction: '&'
