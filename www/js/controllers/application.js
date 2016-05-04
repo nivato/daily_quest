@@ -27,9 +27,22 @@
             this.currentView = item;
         };
 
+        this.enableImmersiveMode = function(){
+            AndroidFullScreen.immersiveMode(
+                function(){
+                    console.info('Immersive Mode enabled');
+                },
+                function(error){
+                    console.error(error);
+                }
+            );
+        };
+
         $(function() {
             FastClick.attach(document.body);
         });
+
+        $deviceReady(this.enableImmersiveMode.bind(this));
     }]);
 
 })();
