@@ -1,9 +1,13 @@
 <modal-dialog modal-title="'Create New Mission'" opened="missions.modal" submit-action="missions.addMission()" close-action="missions.closeMission()">
-    <input type="text" placeholder="Mission Description" />
-    Reward:
-    <div class="btn"><img class="btn-icon"/ src="img/coin.png"> 1 000</div>
-    <div class="btn"><img class="btn-icon"/ src="img/coin.png"> 3 000</div>
-    <div class="btn"><img class="btn-icon"/ src="img/coin.png"> 5 000</div>
+    <div class="form-line">
+        <input type="text" placeholder="Mission Description" />
+    </div>
+    <div class="form-line">
+        Reward:
+        <div class="btn reward"><img src="img/coin.png" /> 1 000</div>
+        <div class="btn reward"><img src="img/coin.png" /> 3 000</div>
+        <div class="btn reward"><img src="img/coin.png" /> 5 000</div>
+    </div>
 </modal-dialog>
 <div class="panel content">
     <div class="tabs">
